@@ -1,0 +1,98 @@
+poner hecho pa saber que ya esta:
+ 🧾 **1. Archivos Java obligatorios**
+
+### 📂 **Modelo base**
+
+1. `Persona.java YA ESTA HECHO
+2. `Cliente.java` *(hereda de Persona)* YA ESTA HECHO
+3. `Veterinario.java` *(hereda de Persona)* YA ESTA HECHO
+4. `Asistente.java` *(hereda de Persona, si lo manejas como clase separada)* YA ESTA HECHO
+5. `Gerente.java` *(hereda de Persona, tiene Sucursal)* YA ESTA HECHO
+6. `Sucursal.java` *(enum con zonas/nombres)* YA ESTA HECHO
+7. `Mascota.java` *(atributos + vacunas\[])* YA ESTA HECHO
+8. `Paquete.java` *(baño, corte, etc.)* YA ESTA HECHO
+9. `Tarjeta.java` *(pago de servicios)*
+
+---
+
+### 📂 **Gestión de Citas y Servicios**
+
+10. `Cita.java YA ESTA HECHO
+11. `RevisionDeCitas.java` *(interfaz)*
+12. `CitaException.java` *(excepción personalizada para fechas ocupadas)*
+13. `VacunaException.java` *(excepción personalizada para adopciones sin vacunas)*
+
+---
+
+### 📂 **Colecciones y lógica de adopciones**
+
+14. `AdopcionManager.java` *(gestiona colección de mascotas disponibles y adoptadas)*
+15. `CitaManager.java` *(gestiona lista de citas, validaciones de disponibilidad)*
+16. `PagoManager.java` *(realiza sumas y pagos con tarjeta)*
+17. `OrdenadorCitas.java` *(implementa Comparator/Comparable para ordenar citas)*
+18. `UtilidadesArchivo.java` *(para guardar consultas en archivos usando java.io)*
+
+---
+
+## 🧪 **2. Pruebas y lógica principal**
+
+19. `Main.java` *(la clase principal del programa con menú y flujo principal)*
+
+---
+
+## 📄 **3. Archivos de soporte adicionales**
+
+* `README.txt`
+
+  > Contenido ejemplo:
+
+  ```
+  Nombre: Juan Pérez  
+  El código que realizo es autoría propia y no es tomado de algún otro lugar o hecho por otra persona.
+  ```
+
+* `basedatos.sql` *(si usas SQL para crear tablas e insertar datos iniciales)*
+
+  * Tablas: `cliente`, `mascota`, `veterinario`, `cita`
+
+* `estructuraBD.txt` (opcional, describe cómo estructuraste la base de datos)
+
+---
+
+## 📁 **Organización recomendada por carpetas (opcional)**
+
+```
+Mascotita/
+├── modelo/
+│   ├── Persona.java
+│   ├── Cliente.java
+│   ├── Veterinario.java
+│   ├── Gerente.java
+│   ├── Asistente.java
+│   ├── Mascota.java
+│   ├── Sucursal.java
+│   ├── Tarjeta.java
+│   └── Paquete.java
+│
+├── servicios/
+│   ├── Cita.java
+│   ├── RevisionDeCitas.java
+│   ├── CitaManager.java
+│   ├── OrdenadorCitas.java
+│   └── PagoManager.java
+│
+├── adopciones/
+│   ├── AdopcionManager.java
+│
+├── excepciones/
+│   ├── CitaException.java
+│   └── VacunaException.java
+│
+├── util/
+│   └── UtilidadesArchivo.java
+│
+├── base/
+│   └── basedatos.sql
+│
+├── README.txt
+└── Main.java
